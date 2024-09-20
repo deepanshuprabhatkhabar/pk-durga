@@ -1,0 +1,108 @@
+@media only screen and (min-width: 2024px) {
+.maxfoundation-main{background-size: 60%;}
+.carousel-caption{top: 40%; width: 36%}
+.carousel-caption p{width: 830px;}
+}
+@media only screen and (max-width: 768px) {
+.navbar-default .navbar-nav > li > a {font-size: 15px;}
+.nav > li > a{padding: 10px 10px}
+.header img{width: 100%}
+.carousel-caption p {font-size: 18px; margin-bottom: 15px;}
+.carousel-caption h5 {font-size: 20px; margin-bottom: 20px;}
+.carousel-caption p:after{top: 15px; left: 300px;}
+.welcome-rightdiv {
+    width: 50%;
+    float: left;
+    padding: 20px 20px 30px 20px;
+}
+.welcome-rightdiv h1{font-size: 26px; margin-top: 0px; margin-bottom: 35px}
+.ourcorevalue-main{    background-repeat: no-repeat;
+    background-size: auto 100%;}
+.leadership-leftcontent {
+    padding: 15px 0px 50px 1px;
+}
+
+.leadership-leftcontent p {
+    font-size: 16px; margin-bottom: 15px;}
+}
+@media only screen and (max-width: 530px) {  
+.aboutseconddiv h2{padding-bottom: 10px;}
+.header{padding: 10px 0px}
+.navbar-brand > img {display: block; width: 165px;}
+.navbar-brand {padding: 0px 15px;}
+.navbar{margin-top: 0px;}
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+    border-color: #e7e7e7;
+    background-color: #083160;
+}
+.navbar-header{padding-bottom: 10px;}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+    background-color: #e67016;
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #fff;
+}
+.carousel-inner > .item > img {width: 100%; height: 300px;}
+.carousel-caption{width: 90%}
+.carousel-caption p {font-size: 16px; margin-bottom: 10px;}
+.carousel-caption h5 {font-size: 16px; margin-bottom: 10px;}
+.welcome-leftdiv {width: 100%;}
+.welcome-rightdiv{width: 100%; padding: 15px 15px 15px 15px;}
+.welcome-rightdiv h1{font-size: 26px;}
+.ourcorevalue-main {background-image: none; background-color: #083160;}
+.keyfinancialdiv h3 img {padding-left: 20px;}
+.driving-main h3 {font-size: 26px;}
+.driving-main img{width: 100%}
+.driving-content-div{padding: 15px 0px 15px 0px;}
+.corporate-main{padding-bottom: 0px;}
+.corporate-div{padding: 50px 15px;}
+.corporate-div h3{text-align: center; margin-bottom: 30px; width: auto;}
+.corporate-div h5{font-size: 18px;}
+
+.maxfoundation-main .max-foundation-img{width: 100%}
+.maxfoundation-content {width: 100%; float: left; padding: 0px 0px 30px 0px;}
+.maxfoundation-crossleft img{width: 50px;}
+.maxfoundation-main{background-position: bottom right; margin-bottom: 0px;}
+.maxfoundation-content img {margin-bottom: 50px;}
+.foundation-logo{width: 100%}
+.twitter-main h3{font-size: 26px;}
+.awards-div p{min-height: auto; margin-bottom: 30px;}
+.twitter-main p {font-size: 20px;}
+.footer-main .col-sm-2 {width: 50%;}
+.btn-style-one{padding: 8px 20px 8px;}
+.btn-style-two{padding: 8px 20px 8px;}
+.btn-style-three{padding: 8px 20px 8px;}
+}
+
+@media only screen and (max-width: 375px) {
+.carousel-caption {top: 25%;}
+.leadership-commoncontent p{margin-bottom: 10px;}
+.keyfinancialdiv h3 {font-size: 18px;}
+.offers1 .owl-prev{left: -10px;}
+.offers1 .owl-next{right: -10px;}
+.maxfoundation-crossleft h5{font-size: 50px; margin-bottom: 5px;}
+}
+
+@media only screen and (max-width: 360px) {
+.carevideo{top: 32%;}
+}
+@media only screen and (max-width: 360px) {
+.leadership-commoncontent p{font-size: 14px;}
+.leadership-commoncontent h5 {font-size: 14px;}
+.keyfinancialdiv h3 {
+    font-size: 15px;
+}
+.corporate-div h5 {
+    font-size: 15px;
+}
+.maxfoundation-crossleft h5 {
+    font-size: 40px;
+    margin-bottom: 5px;
+}
+.welcome-rightdiv h1 {
+    font-size: 25px;
+}
+.ourcorevalue-main h2{font-size: 26px;}
+.leadership-main h3{font-size: 26px;}
+.investorrelations-main h2{font-size: 26px;}
+}

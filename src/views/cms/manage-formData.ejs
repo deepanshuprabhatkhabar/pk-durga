@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include ('head.ejs') %>
+    
+<body class="page-header-fixed sidemenu-closed-hidelogo page-content-white page-md header-white white-sidebar-color logo-indigo">
+    <div class="page-wrapper">
+        <!-- start header -->
+        <!-- <%- include ('header.ejs') %> -->
+        <!-- end header -->
+
+        <!-- start page container -->
+        <div class="page-container">
+
+            <!-- start sidebar menu -->
+            <!-- <%- include ('side-nav.ejs') %> -->
+            <!-- end sidebar menu -->
+
+            <!-- start page content -->
+            <div class="page-content-wrapper">
+                <div class="page-content">
+                    <div class="page-bar">
+                        <div class="page-title-breadcrumb">
+                            <div class=" pull-left">
+                                <div class="page-title">Manage Data</div>
+                            </div>
+                            <ol class="breadcrumb page-breadcrumb pull-right">
+                               
+                                <a href="/api/pkmaster/csv" target="_blank">Export CSV</a>
+
+                            </ol>
+                            <ol class="breadcrumb page-breadcrumb pull-right">
+                               
+                                <li class="active">Manage Data</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <!-- <a href="/cms/about/add/"><button class="btn btn-primary " style="margin-left: 18px;">Add New</button></a> -->
+                        <div class="col-md-12">
+                            <div class="card card-topline-aqua">
+                                <div class="card-head">
+                                    <header>All Users</header>
+                                </div>
+                                <div class="card-body ">
+                                    <table id="datatable" class="display" style="width:100%;">
+                                     <thead>
+                                            <tr>
+                                                <th>Name</th>
+                                                <th>Email</th>
+                                                <th>Gender</th>
+                                                <th>Phone</th>
+                                                <th>Age</th>
+                                                <th>City</th>
+                                                <th>Pincode</th>
+                                                <th>Address</th>
+                                                <th>Created Time</th>
+                                                <th>Image</th>
+                                                <th>Video</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <%for (var i = 0; i < formdata.length; i++) {%>
+                                            <tr>
+                                                <td><%=formdata[i].name%></td>                                               
+                                                <td><%=formdata[i].email%></td>                                               
+                                                <td><%=formdata[i].gender%></td>                                               
+                                                <td><%=formdata[i].phone%></td>                                               
+                                                <td><%=formdata[i].age%></td>                                               
+                                                <td><%=formdata[i].city%></td>                                               
+                                                <td><%=formdata[i].pincode%></td>                                               
+                                                <td><%=formdata[i].address%></td>       
+                                                <td><%=formdata[i].createdAt%></td>       
+
+                                                <td><img class="logo-abbr small_image" src="<%= formdata[i].image%>" width="50px" height="50px"></td>
+                                                <td>
+                                                    <%if (formdata[i].video) {%>
+                                                    <a class="logo-abbr small_image" href="<%= formdata[i].video%>" >Video Link</a><%}%></td>
+                                            </tr>
+                                            <%}%>
+                                        </tbody>
+                                    
+                                    </table>
+
+                                </div>
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end page content -->
+
+        </div>
+        <!-- end page container -->
+
+        <!-- start footer -->
+        <%- include ('footer.ejs') %>
+        <!-- end footer -->
+    </div>
+    <script src="/static/cms/assets/bundles/jquery/jquery.min.js"></script>
+    <script src="/static/cms/assets/bundles/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/static/cms/assets/bundles/jquery-blockUI/jquery.blockui.min.js"></script>
+    <script src="/static/cms/assets/bundles/jquery.slimscroll/jquery.slimscroll.js"></script>
+    <script src="/static/cms/assets/bundles/bootstrap-switch/js/bootstrap-switch.min.js"></script>
+    <script src="/static/cms/assets/bundles/moment/moment.min.js"></script>
+    <!-- data tables -->
+    <script src="/static/cms/assets/bundles/datatables/jquery.dataTables.min.js"></script>
+    <script src="/static/cms/assets/bundles/datatables/plugins/bootstrap/dataTables.bootstrap4.min.js"></script>
+    <!-- Common js-->
+    <script src="/static/cms/assets/app.js"></script>
+    <script src="/static/cms/assets/layout.js"></script>
+    <script src="/static/cms/assets/theme-color.js"></script>
+    <!-- Material -->
+    <script src="/static/cms/assets/bundles/material/material.min.js"></script>
+    <!-- Sweet Alert -->
+    <!-- <script src="/static/cms/assets/bundles/sweet-alert/sweetalert.min.js"></script> -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+ 
+
+<!-- <script>
+
+$(function () {        
+    $('<%= formdata[0].video%>').change(function () {
+
+        //because this is single file upload I use only first index
+        var f = this.files[0]
+
+        //here I CHECK if the FILE SIZE is bigger than 8 MB (numbers below are in bytes)
+        if (f.size > 26214400 || f.fileSize > 26214400)
+        {
+           //show an alert to the user
+           alert("Allowed file size exceeded. (Max. 25 MB)")
+
+           //reset file upload control
+           this.value = null;
+        }
+    })
+});
+
+</script> -->
+
+<script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript">
+    $(document).ready( function () {
+        $('#datatable').dataTable();
+    });
+    </script>
+
+</body>
+
+</html>

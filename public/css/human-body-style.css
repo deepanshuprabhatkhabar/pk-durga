@@ -1,0 +1,279 @@
+svg {
+    width: auto;
+    height: 620px;
+}
+circle {
+    width:5vh;
+    height:5vh;
+    position:absolute;
+    z-index:8;
+    display:block;
+    stroke-width:5px;
+    stroke:rgba(255, 255, 255, .9);
+    fill: rgba(240, 0, 0, .8);
+    animation-name: stretch;
+    animation-duration: 1.2s;
+    animation-timing-function: ease-out;
+    animation-delay: 0;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-fill-mode: none;
+    animation-play-state: running;
+}
+@keyframes stretch {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.pin-form {
+    display: none;
+    width: 30%;
+    padding: 10px;
+    border-radius: 10px;
+    position: fixed;
+    left: 35%;
+    top: 10%;
+    margin-left: -150px;
+    z-index: 9;
+    background: rgb(230 230 230);
+    border: 1px solid #dddddd;
+}
+.pin-form fieldset {
+    padding: 10px 0;
+    border-radius: 10px;
+}
+.pin-form textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.428571429;
+    color: #555;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+.pin-form input {
+    display: block;
+    width: 100%;
+    height: 34px;
+    margin-bottom: 10px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.428571429;
+    color: #555;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+.btn {
+    display: inline-block;
+    padding: 6px 20px;
+    margin-bottom: 0;
+    font-weight: normal;
+    line-height: 1.428571429;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 25px;
+}
+.btn-success {
+    color: #fff!important;
+    background-color: #073785;
+    border-color: #073785;
+    margin-right: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 10px 16px;
+}
+.btn-success:hover {
+    background-color: #319ad5;
+    border-color: #319ad5;
+}
+.btn-danger {
+    color: #fff;
+    background-color: #d9534f;
+    border-color: #d43f3a;
+    margin-left: 5px;
+}
+.pin-confirm {
+    display: none;
+    position: absolute;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    z-index: 6;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, .4);
+}
+.pin-confirm > div{
+    position: absolute;
+}
+.pin-confirm a{
+    display: block;
+    width: 50px;
+    margin: 0 0 10px 0;
+}
+
+ .pin-confirm-succes {
+   display:none;
+   width:100%;
+   height:100%;
+   position: absolute;
+   z-index:7;
+   left:0;
+   top:0;
+   text-align:center;
+   background: rgba(0, 0, 0, .4);
+   
+}
+.pin-confirm-succes a {
+    padding:20px;
+    margin: 150px 0 10px 0;
+  
+}
+#pinForm .form-group, .form-select{width: 100%;}
+
+#pinForm .close {
+    position: absolute;
+    top: -15px;
+    right: -10px;
+    background-color: #173f5f!important;
+    opacity: 1;
+    padding: 1px 6px!important;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 26px;
+    z-index: 99999;
+}
+a.camera {
+    display: flex;
+    line-height: 35px;
+    font-weight: 500;
+    font-size: 17px; text-transform: uppercase;
+}
+a.camera img{margin-right: 5px;}
+a.camera i {
+    font-size: 50px;
+    color: #073785; margin-right: 5px;
+}
+.info-sec .form-radio{margin-bottom: 0;}
+
+/* flip the pane when hovered */
+
+.flip-container.hover .flipper {
+    transform: rotateY(180deg);
+}
+
+.flip-container,
+.front,
+.back {
+    width: 300px;
+    height: 670px;
+    margin: 0 auto;
+    position: relative;
+}
+#cameraModal .modal-footer {
+    margin-top: 20px;
+}
+
+/* flip speed */
+
+.flipper {
+    transition: 0.8s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+
+/* hide back of pane during swap */
+
+.front,
+.back {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+/* front pane, placed above back */
+
+.front {
+    z-index: 2;
+    transform: rotateY(0deg);
+}
+
+
+/* back, initially hidden pane */
+
+.back {
+    transform: rotateY(180deg);
+    background-color: #fff;
+}
+
+.flip-bot {
+    position: absolute;
+    bottom: 0;
+    width: 300px;
+    text-align: center;
+    z-index: 9;
+    cursor: pointer;
+}
+.flip-bot i{color: #ef6300;}
+.humana .form-radio-item:first-child {
+    margin-left: 0;
+}
+.item {
+    margin: 15px;
+    background: #ffffff;
+    padding: 0px;
+    box-shadow: 1px 2px 9px 0px #c2c0c0;
+}
+.item p{padding: 15px;}
+.form-title {
+    padding: 15px;
+    font-size: 22px;
+    font-weight: 500;
+    background: #f9f9f9;
+}
+.symptom {
+    font-size: 15px;
+    padding: 5px 15px;
+    background: #319ad5;
+    border-radius: 10px;
+    color: #ffffff;
+    line-height: 25px;
+    display: inline-flex;
+    margin: 10px 0 5px 10px;
+    max-width: 95%;
+}
+.symptom i {
+    font-size: 28px;
+    margin-left: -2px;
+    margin-top: -1px;
+    color: #073785;
+}
+button.remove-disease {
+    margin: 3px 0 0 10px;
+    background: #ffffff;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 1px solid #319ad5;
+}
+.injured-area{margin: 15px 0 0 15px;}

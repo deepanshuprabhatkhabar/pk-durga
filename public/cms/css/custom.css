@@ -1,0 +1,201 @@
+.preview-images-zone {
+    width: 100%;
+    border: 1px solid #ddd;
+    min-height: 180px;
+    /* display: flex; */
+    padding: 5px 5px 0px 5px;
+    position: relative;
+    overflow: auto;
+}
+
+.preview-images-zone>.preview-image:first-child {
+    height: 185px;
+    width: 185px;
+    position: relative;
+    margin-right: 5px;
+}
+
+.preview-images-zone>.preview-image {
+    height: 90px;
+    width: 90px;
+    position: relative;
+    margin-right: 5px;
+    float: left;
+    margin-bottom: 5px;
+}
+
+.preview-images-zone>.preview-image>.image-zone {
+    width: 100%;
+    height: 100%;
+}
+
+.preview-images-zone>.preview-image>.image-zone>img {
+    width: 100%;
+    height: 100%;
+}
+
+.preview-images-zone>.preview-image>.tools-edit-image {
+    position: absolute;
+    z-index: 100;
+    color: #fff;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+    display: none;
+}
+
+.preview-images-zone>.preview-image>.image-cancel {
+    font-size: 18px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-weight: bold;
+    margin-right: 10px;
+    cursor: pointer;
+    display: none;
+    z-index: 100;
+}
+
+.preview-image:hover>.image-zone {
+    cursor: move;
+    opacity: .5;
+}
+
+.preview-image:hover>.tools-edit-image,
+.preview-image:hover>.image-cancel {
+    display: block;
+}
+
+.ui-sortable-helper {
+    width: 90px !important;
+    height: 90px !important;
+}
+
+.setgallery {
+    color: #fff;
+    background: #E91E63;
+    padding: 10px;
+}
+
+.setgallery:hover {
+    color: #fff;
+    background: #333;
+}
+
+textarea.form-control-textarea {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #cdcdcd;
+}
+
+.bootstrap-select .dropdown-menu li.active small {
+    color: #6c757d !important;
+}
+
+.seasons {
+    width: 100%;
+}
+
+.seasons .float_set {
+    float: left;
+}
+
+.newseasons {
+    width: 100%;
+}
+
+.newseasons .float_set {
+    float: left;
+}
+
+/*button.btn.dropdown-toggle.btn-light.bs-placeholder {
+    background: url("/static/img/br_down.png")no-repeat;
+    background-position: right;
+
+    background-position-x: 275px;
+}*/
+
+.pre_hotel {
+    padding: 0;
+    width: 100%;
+}
+
+.pre_hotel .checkbox {
+    padding-left: 0;
+}
+
+.pre_hotel .sethotel {
+    padding-left: 23px;
+}
+
+ul.main {
+    padding: 0;
+    margin: 0;
+}
+
+.main li {
+    list-style-type: none;
+    padding: 3px 3px;
+}
+
+ul.main ul {
+    margin: 0;
+    padding: 0;
+}
+
+.price_section {
+    float: right;
+    width: 40%;
+    margin: -15px 0 0 0;
+}
+
+.quota_btn1 {
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+}
+
+.quota_btn1 button {
+    background: #bb1369;
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px 35px;
+}
+
+.room_section {
+    float: left;
+    margin: 0 10px;
+}
+
+.setwrap {
+    float: left;
+    width: 100%; 
+    border-bottom: 1px solid #cdcdcd;
+    margin: 0 0 20px 0;
+}
+
+.setwrap .offer {
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: 1px solid #bb1369;
+    padding: 0px 15px;
+    font-size: 12px;
+    border-radius: 5px;
+    background: #bb1369;
+}
+
+#owl-demo .owl-pagination {
+    display: none;
+}
+
+#owl-demo .owl-buttons {
+    margin: 0 0 40px 0;
+}
+
+.error{
+    color: red;
+}
+.setwrap p{width: 210px;}

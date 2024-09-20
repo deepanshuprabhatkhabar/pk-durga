@@ -1,0 +1,943 @@
+
+audio,
+canvas,
+progress,
+video {
+  display: inline-block; /* 1 */
+  vertical-align: baseline; /* 2 */
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9.
+ * Hide the `template` element in IE, Safari, and Firefox < 22.
+ */
+
+[hidden],
+template {
+  display: none;
+}
+
+/* Links
+   ========================================================================== */
+
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+
+a {
+  background: transparent;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* Text-level semantics
+   ========================================================================== */
+
+/**
+ * Address styling not present in IE 8/9, Safari 5, and Chrome.
+ */
+
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
+ */
+
+b,
+strong {
+  font-weight: bold;
+}
+
+/**
+ * Address styling not present in Safari 5 and Chrome.
+ */
+
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari 5, and Chrome.
+ */
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* Embedded content
+   ========================================================================== */
+
+/**
+ * Remove border when inside `a` element in IE 8/9.
+ */
+
+img {
+  border: 0;
+}
+
+/**
+ * Correct overflow displayed oddly in IE 9.
+ */
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Grouping content
+   ========================================================================== */
+
+/**
+ * Address margin not present in IE 8/9 and Safari 5.
+ */
+
+figure {
+  margin: 1em 40px;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+/**
+ * Contain overflow in all browsers.
+ */
+
+pre {
+  overflow: auto;
+}
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit; /* 1 */
+  font: inherit; /* 2 */
+  margin: 0; /* 3 */
+}
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10.
+ */
+
+button {
+  overflow: visible;
+}
+
+
+button,
+select {
+  text-transform: none;
+}
+
+button,
+html input[type="button"], /* 1 */
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button; /* 2 */
+  cursor: pointer; /* 3 */
+}
+
+
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+
+input {
+  line-height: normal;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+input[type="search"] {
+  -webkit-appearance: textfield; /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box; /* 2 */
+  box-sizing: content-box;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+
+legend {
+  border: 0; /* 1 */
+  padding: 0; /* 2 */
+}
+
+
+textarea {
+  overflow: auto;
+}
+
+optgroup {
+  font-weight: bold;
+}
+
+/* Tables
+   ========================================================================== */
+
+/**
+ * Remove most spacing between table cells.
+ */
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+/*!
+ * Datepicker for Bootstrap
+ *
+ * Copyright 2012 Stefan Petre
+ * Improvements by Andrew Rowls
+ * Licensed under the Apache License v2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ */
+.datepicker {
+  padding: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  direction: ltr;
+  /*.dow {
+    border-top: 1px solid #ddd !important;
+  }*/
+}
+.datepicker-inline {
+  width: 220px;
+}
+.datepicker.datepicker-rtl {
+  direction: rtl;
+}
+.datepicker.datepicker-rtl table tr td span {
+  float: right;
+}
+.datepicker-dropdown {
+  top: 0;
+  left: 0;
+}
+.datepicker-dropdown:before {
+  content: '';
+  display: none;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-bottom: 7px solid #ccc;
+  border-top: 0;
+  border-bottom-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+}
+.datepicker-dropdown:after {
+  content: '';
+  display: none;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid #ffffff;
+  border-top: 0;
+  position: absolute;
+}
+/* .datepicker-dropdown.datepicker-orient-left:before {
+  left: 6px;
+}
+.datepicker-dropdown.datepicker-orient-left:after {
+  left: 7px;
+}
+.datepicker-dropdown.datepicker-orient-right:before {
+  right: 6px;
+}
+.datepicker-dropdown.datepicker-orient-right:after {
+  right: 7px;
+}
+.datepicker-dropdown.datepicker-orient-top:before {
+  top: -7px;
+}
+.datepicker-dropdown.datepicker-orient-top:after {
+  top: -6px;
+} */
+.datepicker-dropdown.datepicker-orient-bottom:before {
+  bottom: -7px;
+  border-bottom: 0;
+  border-top: 7px solid #999;
+}
+.datepicker-dropdown.datepicker-orient-bottom:after {
+  bottom: -6px;
+  border-bottom: 0;
+  border-top: 6px solid #ffffff;
+}
+.main-calender .datepicker > div {
+  display: none;
+}
+.datepicker.days div.datepicker-days {
+  display: block;
+}
+.datepicker.months div.datepicker-months {
+  display: block;
+}
+.datepicker.years div.datepicker-years {
+  display: block;
+}
+.main-calender .datepicker table {
+  margin: 0;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.main-calender .datepicker td,
+.main-calender .datepicker th {
+  text-align: center;
+  width: 20px;
+  height: 55px;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  border: none;
+
+  font-size: 13px;
+  font-weight: 700;
+}
+.table-striped .datepicker table tr td,
+.table-striped .datepicker table tr th {
+  background-color: transparent;
+}
+.main-calender .datepicker  table tr td.day:hover,
+.main-calender .datepicker  table tr td.day.focused {
+  background-color: transparent;
+  cursor: pointer;
+}
+.main-calender .datepicker  table tr td.old,
+.main-calender .datepicker  table tr td.new {
+  color: #999999;
+}
+.main-calender .datepicker  table tr td.disabled,
+.main-calender .datepicker  table tr td.disabled:hover {
+  background: none;
+  color: #999999;
+  cursor: default;
+}
+.main-calender .datepicker  table tr td.today,
+.main-calender .datepicker  table tr td.today:hover,
+.main-calender .datepicker  table tr td.today.disabled,
+.main-calender .datepicker  table tr td.today.disabled:hover {
+  background: #ffffff!important;
+  color: #ffffff !important;
+  border: 0px solid #319ad5;
+}
+.main-calender .datepicker  table tr td.today:hover,
+.main-calender .datepicker  table tr td.today:hover:hover,
+.main-calender .datepicker  table tr td.today.disabled:hover,
+.main-calender .datepicker  table tr td.today.disabled:hover:hover,
+.main-calender .datepicker  table tr td.today:active,
+.main-calender .datepicker  table tr td.today:hover:active,
+.main-calender .datepicker  table tr td.today.disabled:active,
+.main-calender .datepicker  table tr td.today.disabled:hover:active,
+.main-calender .datepicker  table tr td.today.active,
+.main-calender .datepicker  table tr td.today:hover.active,
+.main-calender .datepicker  table tr td.today.disabled.active,
+.main-calender .datepicker  table tr td.today.disabled:hover.active,
+.main-calender .datepicker  table tr td.today.disabled,
+.main-calender .datepicker  table tr td.today:hover.disabled,
+.main-calender .datepicker  table tr td.today.disabled.disabled,
+.main-calender .datepicker  table tr td.today.disabled:hover.disabled,
+.main-calender .datepicker  table tr td.today[disabled],
+.main-calender .datepicker  table tr td.today:hover[disabled],
+.main-calender .datepicker  table tr td.today.disabled[disabled],
+.main-calender .datepicker  table tr td.today.disabled:hover[disabled] {
+  background-color: #319ad5;
+}
+.main-calender .datepicker  table tr td.today:active,
+.main-calender .datepicker  table tr td.today:hover:active,
+.main-calender .datepicker  table tr td.today.disabled:active,
+.main-calender .datepicker  table tr td.today.disabled:hover:active,
+.main-calender .datepicker  table tr td.today.active,
+.main-calender .datepicker  table tr td.today:hover.active,
+.main-calender .datepicker  table tr td.today.disabled.active,
+.main-calender .datepicker  table tr td.today.disabled:hover.active {
+  background-color: #0d519e \9;
+}
+.main-calender .datepicker  table tr td.today:hover:hover {
+  color: #000;
+}
+.main-calender .datepicker  table tr td.today.active:hover {
+  color: #fff;
+}
+.main-calender .datepicker  table tr td.range,
+.main-calender .datepicker  table tr td.range:hover,
+.main-calender .datepicker  table tr td.range.disabled,
+.main-calender .datepicker  table tr td.range.disabled:hover {
+  background: #eeeeee;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+.main-calender .datepicker  table tr td.range.today,
+.main-calender .datepicker  table tr td.range.today:hover,
+.main-calender .datepicker  table tr td.range.today.disabled,
+.main-calender .datepicker  table tr td.range.today.disabled:hover {
+  background-color: #ff8c00;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+.main-calender .datepicker  table tr td.range.today:hover,
+.main-calender .datepicker  table tr td.range.today:hover:hover,
+.main-calender .datepicker  table tr td.range.today.disabled:hover,
+.main-calender .datepicker  table tr td.range.today.disabled:hover:hover,
+.main-calender .datepicker  table tr td.range.today:active,
+.main-calender .datepicker  table tr td.range.today:hover:active,
+.main-calender .datepicker  table tr td.range.today.disabled:active,
+.main-calender .datepicker  table tr td.range.today.disabled:hover:active,
+.main-calender .datepicker  table tr td.range.today.active,
+.main-calender .datepicker  table tr td.range.today:hover.active,
+.main-calender .datepicker  table tr td.range.today.disabled.active,
+.main-calender .datepicker  table tr td.range.today.disabled:hover.active,
+.main-calender .datepicker  table tr td.range.today.disabled,
+.main-calender .datepicker  table tr td.range.today:hover.disabled,
+.main-calender .datepicker  table tr td.range.today.disabled.disabled,
+.main-calender .datepicker  table tr td.range.today.disabled:hover.disabled,
+.main-calender .datepicker  table tr td.range.today[disabled],
+.main-calender .datepicker  table tr td.range.today:hover[disabled],
+.main-calender .datepicker  table tr td.range.today.disabled[disabled],
+.main-calender .datepicker  table tr td.range.today.disabled:hover[disabled] {
+  background-color: #f3e97a;
+}
+.main-calender .datepicker  table tr td.range.today:active,
+.main-calender .datepicker  table tr td.range.today:hover:active,
+.main-calender .datepicker  table tr td.range.today.disabled:active,
+.main-calender .datepicker  table tr td.range.today.disabled:hover:active,
+.main-calender .datepicker  table tr td.range.today.active,
+.main-calender .datepicker  table tr td.range.today:hover.active,
+.main-calender .datepicker  table tr td.range.today.disabled.active,
+.main-calender .datepicker  table tr td.range.today.disabled:hover.active {
+  background-color: #efe24b \9;
+}
+.main-calender .datepicker  table tr td.selected,
+.main-calender .datepicker  table tr td.selected:hover,
+.main-calender .datepicker  table tr td.selected.disabled,
+.main-calender .datepicker  table tr td.selected.disabled:hover {
+  background-color: #ff8c00;
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+.main-calender .datepicker  table tr td.selected:hover,
+.main-calender .datepicker  table tr td.selected:hover:hover,
+.main-calender .datepicker  table tr td.selected.disabled:hover,
+.main-calender .datepicker  table tr td.selected.disabled:hover:hover,
+.main-calender .datepicker  table tr td.selected:active,
+.main-calender .datepicker  table tr td.selected:hover:active,
+.main-calender .datepicker  table tr td.selected.disabled:active,
+.main-calender .datepicker  table tr td.selected.disabled:hover:active,
+.main-calender .datepicker  table tr td.selected.active,
+.main-calender .datepicker  table tr td.selected:hover.active,
+.main-calender .datepicker  table tr td.selected.disabled.active,
+.main-calender .datepicker  table tr td.selected.disabled:hover.active,
+.main-calender .datepicker  table tr td.selected.disabled,
+.main-calender .datepicker  table tr td.selected:hover.disabled,
+.main-calender .datepicker  table tr td.selected.disabled.disabled,
+.main-calender .datepicker  table tr td.selected.disabled:hover.disabled,
+.main-calender .datepicker  table tr td.selected[disabled],
+.main-calender .datepicker  table tr td.selected:hover[disabled],
+.main-calender .datepicker  table tr td.selected.disabled[disabled],
+.main-calender .datepicker  table tr td.selected.disabled:hover[disabled] {
+  background-color: #808080;
+}
+.main-calender .datepicker  table tr td.selected:active,
+.main-calender .datepicker  table tr td.selected:hover:active,
+.main-calender .datepicker  table tr td.selected.disabled:active,
+.main-calender .datepicker  table tr td.selected.disabled:hover:active,
+.main-calender .datepicker  table tr td.selected.active,
+.main-calender .datepicker  table tr td.selected:hover.active,
+.main-calender .datepicker  table tr td.selected.disabled.active,
+.main-calender .datepicker  table tr td.selected.disabled:hover.active {
+  background-color: #666666 \9;
+}
+
+
+.main-calender .datepicker  table tr td.active:active,
+.main-calender .datepicker  table tr td.active:hover:active,
+.main-calender .datepicker  table tr td.active.disabled:active,
+.main-calender .datepicker  table tr td.active.disabled:hover:active,
+.main-calender .datepicker  table tr td.active.active,
+.main-calender .datepicker  table tr td.active:hover.active,
+.main-calender .datepicker  table tr td.active.disabled.active,
+.main-calender .datepicker  table tr td.active.disabled:hover.active {
+  background-color: #003399 \9;
+}
+.main-calender .datepicker  table tr td span {
+  display: block;
+  width: 23%;
+  height: 54px;
+  line-height: 54px;
+  float: left;
+  margin: 1%;
+  cursor: pointer;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+.main-calender .datepicker  table tr td span:hover {
+  background: #eeeeee;
+}
+.main-calender .datepicker  table tr td span.disabled,
+.main-calender .datepicker  table tr td span.disabled:hover {
+  background: none;
+  color: #999999;
+  cursor: default;
+}
+.main-calender .datepicker  table tr td span.active,
+.main-calender .datepicker  table tr td span.active:hover,
+.main-calender .datepicker  table tr td span.active.disabled,
+.main-calender .datepicker  table tr td span.active.disabled:hover {
+  background-color: #ff8c00;
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+.main-calender .datepicker  table tr td span.active:hover,
+.main-calender .datepicker  table tr td span.active:hover:hover,
+.main-calender .datepicker  table tr td span.active.disabled:hover,
+.main-calender .datepicker  table tr td span.active.disabled:hover:hover,
+.main-calender .datepicker  table tr td span.active:active,
+.main-calender .datepicker  table tr td span.active:hover:active,
+.main-calender .datepicker  table tr td span.active.disabled:active,
+.main-calender .datepicker  table tr td span.active.disabled:hover:active,
+.main-calender .datepicker  table tr td span.active.active,
+.main-calender .datepicker  table tr td span.active:hover.active,
+.main-calender .datepicker  table tr td span.active.disabled.active,
+.main-calender .datepicker  table tr td span.active.disabled:hover.active,
+.main-calender .datepicker  table tr td span.active.disabled,
+.main-calender .datepicker  table tr td span.active:hover.disabled,
+.main-calender .datepicker  table tr td span.active.disabled.disabled,
+.main-calender .datepicker  table tr td span.active.disabled:hover.disabled,
+.main-calender .datepicker  table tr td span.active[disabled],
+.main-calender .datepicker  table tr td span.active:hover[disabled],
+.main-calender .datepicker  table tr td span.active.disabled[disabled],
+.main-calender .datepicker  table tr td span.active.disabled:hover[disabled] {
+  background-color: #ff8c00;
+}
+.main-calender .datepicker  table tr td span.active:active,
+.main-calender .datepicker  table tr td span.active:hover:active,
+.main-calender .datepicker  table tr td span.active.disabled:active,
+.main-calender .datepicker  table tr td span.active.disabled:hover:active,
+.main-calender .datepicker  table tr td span.active.active,
+.main-calender .datepicker  table tr td span.active:hover.active,
+.main-calender .datepicker  table tr td span.active.disabled.active,
+.main-calender .datepicker  table tr td span.active.disabled:hover.active {
+  background-color: #003399 \9;
+}
+.main-calender .datepicker  table tr td span.old,
+.main-calender .datepicker  table tr td span.new {
+  color: #999999;
+}
+.main-calender .datepicker  th.main-calender .datepicker -switch {
+  width: 145px;
+}
+.main-calender .datepicker  thead tr:first-child th,
+.main-calender .datepicker  tfoot tr th {
+  cursor: pointer;
+  background-color: #fbf9fa;
+  color: #000000;
+}
+.main-calender .datepicker  thead tr:first-child th:hover,
+.main-calender .datepicker  tfoot tr th:hover {
+  background: #fbf9fa;
+}
+.last-field-names {
+  margin-bottom: 24px;
+  font-size: 16px;
+  border-bottom: 1px solid #e6e6e6;
+  padding-bottom: 10px;
+}
+.last-field-names strong{font-weight: 500}
+.main-calender .datepicker  .cw {
+  font-size: 10px;
+  width: 12px;
+  padding: 0 2px 0 5px;
+  vertical-align: middle;
+}
+.main-calender .datepicker  thead tr:first-child th.cw {
+  cursor: default;
+  background-color: transparent;
+}
+.input-append.date .add-on i,
+.input-prepend.date .add-on i {
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+}
+.input-daterange input {
+  text-align: center;
+}
+.input-daterange input:first-child {
+  -webkit-border-radius: 3px 0 0 3px;
+  -moz-border-radius: 3px 0 0 3px;
+  border-radius: 3px 0 0 3px;
+}
+.input-daterange input:last-child {
+  -webkit-border-radius: 0 3px 3px 0;
+  -moz-border-radius: 0 3px 3px 0;
+  border-radius: 0 3px 3px 0;
+}
+.input-daterange .add-on {
+  display: inline-block;
+  width: auto;
+  min-width: 16px;
+  height: 20px;
+  padding: 4px 5px;
+  font-weight: normal;
+  line-height: 20px;
+  text-align: center;
+  text-shadow: 0 1px 0 #ffffff;
+  vertical-align: middle;
+  background-color: #eeeeee;
+  border: 1px solid #ccc;
+  margin-left: -5px;
+  margin-right: -5px;
+}
+.main-calender .datepicker .dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  float: left;
+  display: none;
+  min-width: 160px;
+  list-style: none;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  *border-right-width: 2px;
+  *border-bottom-width: 2px;
+  color: #333333;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  line-height: 20px;
+}
+.main-calender .datepicker.dropdown-menu th,
+.main-calender .datepicker.datepicker-inline th,
+.main-calender .datepicker.dropdown-menu td,
+.main-calender .datepicker.datepicker-inline td {
+  padding: 4px 5px;
+}
+
+.main-calender .datepicker .dow {
+
+  border-bottom: 1px solid #e7e7e7;
+
+  color: #9b8079;
+  font-size: 13px;
+}
+
+.datepicker-months .prev,
+.datapicker-months .next,
+.datepicker-years .prev,
+.datepicker-years .next {
+  width: 58px;
+}
+
+.datepicker-days tbody td:nth-child(1),
+.datepicker-days tbody td:nth-child(7) {
+  color: #dddddd;
+  background-color: #f7f7f7;
+  pointer-events: none;
+
+}
+.last-field-names span:last-child {
+  float: right;
+}
+#timeslote {
+    width: 100%; padding: 0 20px;
+    display: inline-block; float: left;
+}
+.timeslote{width: 33%; display: inline-block; float: left;}
+
+.timeslote a {
+  display: block; border-radius: 5px;
+  padding: 4px;
+  font-size: 15px;
+  margin: 10px;
+  text-align: center;
+  width: 176px;
+  border: 1px solid #f3f3f3;
+  box-shadow: -1px 1px 7px 0px #2b90d926;
+  -o-transition: all .4s linear;
+  transition: all .4s linear;
+  -webkit-transition: all .4s linear;
+  -moz-transition: all .4s linear;
+}
+.timeslote a:hover {
+  background: #2b90d9;
+  color: #ffffff;
+}
+.timeslote .notavail:hover{background: #ddd;
+  color: #888;
+  cursor: not-allowed;
+  text-decoration: none;}
+.timeslote .selected {
+    background: #006c9d;
+    color: white;
+}
+
+.timeslote .notavail{background: #ddd; color: #888; cursor: not-allowed; text-decoration: none;}
+/* app */
+.charset {
+  box-shadow: 1px 1px 10px #000;
+}
+
+.app {
+  width: 100%; 
+  margin: 0; display: inline-block; float: left;
+}
+.app:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.app table tr th {
+    background: #d0e6f3;
+    color: #000000!important;
+    padding: 10px 0; border-radius: 0;
+}
+  .app__side {
+    background: #333;
+    width: 35%; height: 100%;
+    padding: 0px;
+    float: left;
+
+    color: #ff8c00;
+  }
+  .app__main {
+    background: #ffffff;
+    width: 100%; height: 100%;
+    float: left;
+    padding: 0px; margin-top: 30px;
+  }
+/* b-calendar */
+.calendar {
+  padding: 0px;
+}
+.calendar .datepicker {
+width: 100%;
+}
+.calendar .datepicker table {
+width: 100%;
+}
+
+.divider{width: 100%;
+    height: 1px;
+    background: #ddd;
+    margin: 25px 0;
+    display: block;
+    float: left;}
+.bottom-div{float: left;}
+.modal-title {
+    margin-bottom: 0;
+    line-height: 1.5;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.main-calender .datepicker table tr td.today {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+.main-calender .datepicker table tr td.today:before {
+  width: 50%;
+  height: 84%;
+  content: "";
+  background: #ef6300;
+  position: absolute;
+  left: 25%;
+  top: 3px;
+  color: #ffffff;
+  z-index: -1;
+  border-radius: 50%;
+}
+
+.main-calender .datepickertable tr td.active{background-color: transparent!important;}
+.main-calender .datepicker table tr td.active, .main-calender .datepicker table tr td.active.disabled, .main-calender .datepicker table tr td.active.disabled:hover, .main-calender .datepicker table tr td.active:hover {
+  background-color: #ffffff;
+  background-image: -moz-linear-gradient(to bottom,#fff,#fff);
+  background-image: -ms-linear-gradient(to bottom,#fff,#fff);
+  background-image: -webkit-gradient(linear,0 0,0 100%,from(#fff),to(#fff));
+  background-image: -webkit-linear-gradient(to bottom,#fff,#fff);
+  background-image: -o-linear-gradient(to bottom,#fff,#fff);
+  background-image: linear-gradient(to bottom,#fff,#fff);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#08c', endColorstr='#0044cc', GradientType=0);
+  border-color: #04c #04c #002a80;
+  border-color: rgba(0,0,0,.1) rgba(0,0,0,.1) rgba(0,0,0,.25);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+  color: #ffffff;
+  text-shadow: 0 -1px 0 rgb(0 0 0 / 25%);
+}
+.main-calender .datepicker table tr td.active.active{
+position: relative;
+z-index: 1;
+}
+.main-calender .datepicker table tr td.active.active:before{
+  width: 50%;
+  height: 84%;
+  content: "";
+  background: #006ccc;
+  position: absolute;
+  left: 25%;
+  top: 3px;
+  color: #ffffff;
+  z-index: -1;
+  border-radius: 50%;
+}
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
+.main-calender .datepicker table tr td.active.active:before {
+  width: 59%;
+  height: 84%;
+  left: 20%;
+
+}
+@media screen and (min-width: 1600px) {
+
+  .main-calender .datepicker table tr td.today:before {
+    width: 47%;
+    height: 84%;
+    left: 26%;
+    top: 4px;
+}
+.main-calender .datepicker table tr td.active.active:before {
+  width: 50%;
+  height: 82%;
+  content: "";
+  background: #006ccc;
+  position: absolute;
+  left: 25%;
+  top: 6px;
+  color: #ffffff;
+  z-index: -1;
+  border-radius: 50%;
+}
+}
+@media screen and (min-width: 1900px) {
+  .main-calender .datepicker table tr td.today:before {
+    width: 47%;
+    height: 90%;
+    left: 26%;
+    top: 3px;
+}
+}

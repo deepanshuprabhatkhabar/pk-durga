@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include ('head.ejs') %>
+    
+<body class="page-header-fixed sidemenu-closed-hidelogo page-content-white page-md header-white white-sidebar-color logo-indigo">
+    <div class="page-wrapper">
+        <!-- start header -->
+        <!-- <%- include ('header.ejs') %> -->
+        <!-- end header -->
+
+        <!-- start page container -->
+        <div class="page-container">
+
+            <!-- start sidebar menu -->
+            <!-- <%- include ('side-nav.ejs') %> -->
+            <!-- end sidebar menu -->
+
+            <!-- start page content -->
+            <div class="page-content-wrapper">
+                <div class="page-content">
+                    <div class="page-bar">
+                        <div class="page-title-breadcrumb">
+                            <div class=" pull-left">
+                                <div class="page-title">Manage Data</div>
+                            </div>
+                            <ol class="breadcrumb page-breadcrumb pull-right">
+                               
+                                <a href="/api/pk-durga/csv/<%=formName%>" target="_blank">Export CSV</a>
+
+                            </ol>
+                            <!-- <ol class="breadcrumb page-breadcrumb pull-right">
+                               
+                                <li class="active">Manage Data</li>
+                            </ol> -->
+                        </div>
+                        
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="col-lg-3">
+                            <label>Start Date</label>
+                            <input id="product_product" class="form-control datechange" type="date" name="productYear">
+                            <label>End Date</label>
+                            <input id="product_endDate" class="form-control datechange" type="date" name="productYear1">
+                            <h4 style="border: solid;text-align: center;
+                            margin: 24px 0 0;
+                            font-size: 13px;
+                            float: left;
+                            font-weight: 800;
+                            padding: 8px 15px;"><a id="downloadLink" href="/api/pk-durga/date-export?form=<%=formName%>">Custom export</a></h4>
+
+                        </div>
+                                  
+                                
+                    </div>
+                    <div class="row">
+                        <!-- <a href="/cms/about/add/"><button class="btn btn-primary " style="margin-left: 18px;">Add New</button></a> -->
+                        <div class="col-md-12">
+                            <div class="card card-topline-aqua">
+                                <div class="card-head">
+                                    <header>All Users</header>
+                                </div>
+                                <div class="card-body ">
+                                    <table id="datatable" class="display" style="width:100%;">
+                                     <thead>
+                                            <tr>
+                                                <th>Name</th>
+                                                <th>Email</th>
+                                                <th>Gender</th>
+                                                <th>Phone</th>
+                                                <th>Age</th>
+                                                <th>City</th>
+                                                <th>Pincode</th>
+                                                                                            
+                                                <%if(formName == 'reels'){%>
+                                                <th>Video</th>
+                                                <%}else{%>
+                                                <th>Image</th>
+                                                <%}%>
+                                                <th>Remarks</th>
+                                                <th>Created Time</th>
+
+                                                <!-- <th>View File</th> -->
+                                                <!-- <th>UTM Source</th>
+                                                <th>UTM Medium</th>
+                                                <th>UTM Campaign</th> -->
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <%for (var i = 0; i < formdata.length; i++) {%>
+                                            <tr>
+                                                <td><%=formdata[i]?.name%></td>                                               
+                                                <td><%=formdata[i]?.email%></td>                                               
+                                                <td><%=formdata[i]?.gender%></td>                                               
+                                                <td><%=formdata[i]?.phone%></td>                                               
+                                                <td><%=formdata[i]?.age%></td>                                               
+                                                <td><%=formdata[i]?.city%></td>                                               
+                                                <td><%=formdata[i]?.pincode%></td>                                                                                         
+                                                <%if(formName != 'reels'){%>
+                                                <td><a class="logo-abbr small_image" href="<%= formdata[i]?.image%>" target="_blank"><img class="logo-abbr small_image" src="<%=formdata[i]?.image%>" width="50px" height="50px"></a></td>
+                                                <%}%>
+                                                    <%if (formName == 'reels') {%>
+                                                <td> <a class="logo-abbr small_image" href="<%= formdata[i]?.video%>" target="_blank">Video Link</a></td><%}%>
+                                                    <!-- <td><%=formdata[i]?.utm_source%></td>                                               
+                                                    <td><%=formdata[i]?.utm_medium%></td>                                               
+                                                    <td><%=formdata[i]?.utm_campaign%></td>    -->
+                                                    <td><%=formdata[i]?.remark%></td>
+                                                <td><%=moment(formdata[i]?.createdAt).format("DD-MM-YYYY")%></td>       
+
+                                            </tr>
+                                            <%}%>
+                                        </tbody>
+                                    
+                                    </table>
+
+                                </div>
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end page content -->
+
+        </div>
+        <!-- end page container -->
+
+        <!-- start footer -->
+        <%- include ('footer.ejs') %>
+        <!-- end footer -->
+    </div>
+    <script src="/static/cms/assets/bundles/jquery/jquery.min.js"></script>
+    <script src="/static/cms/assets/bundles/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/static/cms/assets/bundles/jquery-blockUI/jquery.blockui.min.js"></script>
+    <script src="/static/cms/assets/bundles/jquery.slimscroll/jquery.slimscroll.js"></script>
+    <script src="/static/cms/assets/bundles/bootstrap-switch/js/bootstrap-switch.min.js"></script>
+    <script src="/static/cms/assets/bundles/moment/moment.min.js"></script>
+    <!-- data tables -->
+    <script src="/static/cms/assets/bundles/datatables/jquery.dataTables.min.js"></script>
+    <script src="/static/cms/assets/bundles/datatables/plugins/bootstrap/dataTables.bootstrap4.min.js"></script>
+    <!-- Common js-->
+    <script src="/static/cms/assets/app.js"></script>
+    <script src="/static/cms/assets/layout.js"></script>
+    <script src="/static/cms/assets/theme-color.js"></script>
+    <!-- Material -->
+    <script src="/static/cms/assets/bundles/material/material.min.js"></script>
+    <!-- Sweet Alert -->
+    <!-- <script src="/static/cms/assets/bundles/sweet-alert/sweetalert.min.js"></script> -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+ 
+
+<script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript">
+    $(document).ready( function () {
+        $('#datatable').dataTable();
+    });
+    </script>
+
+
+
+<script>
+    const dropdown = document.getElementById('product_product');
+    const dropdown1 = document.getElementById('product_endDate');
+    const downloadLink = document.getElementById('downloadLink');
+
+    $('.datechange').on('change', function() {
+    
+        // console.log("dp", dropdown.value);
+    
+      const selectedValue = dropdown.value;
+      const selectedValue1 = dropdown1.value;
+    
+    
+      if(!selectedValue){
+    alert("Select start date first")
+    $("#product_endDate").val('')
+      }else if( selectedValue1 && selectedValue1 < selectedValue){
+    alert("Invalid interval")
+    $("#product_endDate").val('')
+    
+      }else{
+        const newHref = `/api/pk-durga/date-export?form=<%=formName%>&startDate=${selectedValue}&endDate=${selectedValue1}`;
+      downloadLink.setAttribute('href', newHref);
+      }
+      
+    });
+    
+    
+     </script>
+
+
+</body>
+
+</html>

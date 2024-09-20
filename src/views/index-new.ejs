@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <title>Trendsnavutsav</title>
+  <!-- Favicon-->
+  <link rel="shortcut icon" href="/static/images/logo.png" />
+  <!-- Core theme CSS (includes Bootstrap)-->
+  <link href="../../static/css/styles.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+
+.form-group {
+  position: relative;
+}
+.form-group .palceholder {
+  position: absolute;
+  top: 50%;
+  left: 2px;
+  color: #495057;
+  display: none;
+  width: 100%;
+  transform: translateY(-50%);
+  left: 33px;
+  cursor: text;
+  width: 100%;
+  max-width: max-content;
+}
+.form-group .palceholder label {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #495057;
+  width: auto;
+  margin: 0px;
+  cursor: text;
+}
+.form-group .star {
+  color: #ff0000;
+}
+
+  </style>
+</head>
+
+<body>
+  <div class="loader-main hidden">
+
+    <div class="lds-ellipsis">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+  </div>
+  <div id="mymodel" class="model">
+    <div class="model-content">
+      <div class="modal-header">
+        <span class="close" data-close="model">&times;</span>
+
+      </div>
+      <div class="modal-body">
+        <p>Terms and Condition Apply</p>
+      </div>
+    </div>
+  </div>
+  <div class=" slider_bg">
+    <img src="../../static/images/festive-celebration.jpg" alt="banner">
+  </div>
+  <div class=" mobilebanner">
+    <img src="../../static/images/festive-celebration-mobile.jpg" alt="banner">
+  </div>
+  <div class="descriptionsection">
+    <div class="container">
+      <div class="row">
+        <h4>Participate & Win Cash Prize up to Rs 2 Lakhs</h4>
+        <p><span class="bold-text">Contest 1 : MY FESTIVE, MY LOOK</span> - This Festive Season Wear an Ethnic Dress, Click
+          your Photo and share
+          it
+          with
+          Prabhat
+          Khabar. </p>
+        <p> <span class="bold-text">Contest 2 : FESTIVE REELS</span> - Upload a 40-second video highlighting the Festive
+          theme. </p>
+        <p> Last date of participation is 30th November, 2023 till 5 pm.</p>
+        <p>Let us all join and make this Festive Season special with Trends. To participate please
+          register below.</p>
+        <div class="icon-new">
+          <img src="../../static/images/mandala.png" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="imgsection">
+    <div class="container">
+      <div class="row">
+        <h4 class="events text-center">Choose Event To Participate</h4>
+        <div class="grid">
+          <ul id="tabs-nav">
+            <li class="fixli">
+              <a href="#tab1">
+                <figure class="effect-sadie">
+                  <img src="../../static/images/my-pooja.png" alt="banner" onclick="showimg('showvid')">
+                  <figcaption>
+                    <h2 class="pooja">My FESTIVE - My Look</span></h2>
+                    <p>Upload your best ethnic outfit for the FESTIVE Season.</p>
+                  </figcaption>
+                </figure>
+              </a>
+              <div class="icon-news">
+                <img class="mandalaimage" src="../../static/images/mandala.png" alt="">
+              </div>
+            </li>
+            <li class="fixli">
+              <a href="#tab2">
+                <figure class="effect-sadie">
+                  <img src="../../static/images/durga-pooja-on-reel.png" alt="banner" onclick="showimg('showvid')">
+                  <figcaption>
+                    <h2> FESTIVE reels</h2>
+                    <p>Upload a 40-second video highlighting the FESTIVE
+                      theme.</p>
+                  </figcaption>
+
+                </figure>
+              </a>
+              <div class="icon-news">
+                <img class="mandalaimage" src="../../static/images/mandala.png" alt="">
+              </div>
+            </li>
+          </ul>
+          <ul id="tabs-nav" style="display:none;">
+            <li class="fixli"><a href="#tab1"><img src="../../static/images/my-pooja.jpg" alt="banner"
+                  onclick="showimg('showvid')"></a></li>
+            <li class="fixli"><a href="#tab2"><img src="../../static/images/durga-pooja-on-reel.jpg" alt="banner"
+                  onclick="showimg('showvid')"></a></li>
+
+
+          </ul> <!-- END tabs-nav -->
+
+          <div id="tabs-content">
+            <div id="tab1" class="tab-content">
+              <div class="about_info">
+                <h2 id="videoform">Upload Your Image</h2>
+                <form id="formdata" method="post" enctype="multipart/form-data">
+
+                  <input type="hidden" name="formName" value="image">
+
+                  <input type="hidden" name="utm_source" id="utm_source"
+                    value="<% if(typeof utm_sourcekey!=='undefined'){ %><%=utm_sourcekey%><%}%>">
+                  <input type="hidden" name="utm_medium" id="utm_medium"
+                    value="<% if(typeof utm_mediumkey!=='undefined'){ %><%=utm_mediumkey%><%}%>">
+                  <input type="hidden" name="utm_campaign" id="utm_campaign"
+                    value="<% if(typeof utm_campaignkey!=='undefined'){ %><%=utm_campaignkey%><%}%>">
+
+                  <div class="form-group">
+                    <div class="palceholder">
+                    </div>
+                    <input onkeypress="return nameValidater(event)" type="text" placeholder="Enter Your Name*" class="form-control" name="name"
+                      id="name" required>
+						<span class="error" id="name_error" style="display: none; color:red; margin-top: 5px;">Name Is Required</span>
+
+                  </div>
+                  <div class="form-group">
+                    <div class="palceholder">
+                    </div>
+                    <input onkeyup="emailvalidation()" type="email" placeholder="Enter A Valid Email ID" class="form-control" name="email" id="email">
+						<span class="error" id="email_error" style="display: none; color:red; margin-top: 5px;">Name Is Required</span>
+
+                  </div>
+                  <div class="form-group">
+                    <div class="palceholder">
+                    </div>
+                    <input onkeypress="return onlyNumberKey(event)" type="text" placeholder="Phone No.*" class="form-control" id="mobile"
+                      name="phone" maxlength="10" required>
+						<span class="error" id="phone_error" style="display: none; color:red; margin-top: 5px;">Name Is Required</span>
+
+                  </div>
+                  <div class="form-group">
+                    <label id="gender">Gender*</label>
+                    <input type="radio" name="gender" id="radiobtn" value="male" checked> Male
+                    <input type="radio" name="gender" id="radiobtn" value="female"> Female
+
+						<span class="error" id="gender_error" style="display: none; color:red; margin-top: 5px;">Name Is Required</span>
+
+                  </div>
+
+                  <div class="form-group">
+                    <div class="palceholder">
+                    </div>
+                    <input onkeypress="return onlyNumberKey(event)" onchange="ageValidation()" type="text"
+                      class="form-control" id="age" name="age" maxlength="2" placeholder="Enter Your Age*" required>
+						<span class="error" id="age_error" style="display: none; color:red; margin-top: 5px;">Name Is Required</span>
+
+                  </div>
+                  <div class="form-group">
+                    <div class="palceholder">
+                    </div>
+                    <input type="text" class="form-control" id="city" name="city" placeholder="Enter Your City*" required>
+						<span class="error" id="city_error" style="display: none; color:red; margin-top: 5px;">Name Is Required</span>
+
+                  </div>
+                  <div class="form-group pincode">
+                    <div class="palceholder">
+                    </div>
+                    <input onkeypress="return onlyNumberKey(event)" onchange="Pinvalidation()" type="text"
+                      class="form-control" id="pincode" name="pincode" placeholder="Enter Pincode*" maxlength="6"
+                      required>
+						<span class="error" id="pincode_error" style="display: none; color:red; margin-top: 5px;">Name Is Required</span>
+
+                  </div>
+                  <div class="form-group" id="imageSection">
+                    <label>Upload Image*</label>
+                    <input type="file" class="form-control" id="image" name="image" placeholder="Choose A Image"
+                      accept="image/x-png,image/gif,image/jpeg" oninput="imagevalidation()">
+						<span class="error" id="image_error" style="display: none; color:red; margin-top: 5px;">Name Is Required</span>
+
+                  </div>
+
+                  <div class=" maxupload" for="imageSection">
+                    <p>Max upload size is 10 MB</p>
+                  </div>
+
+                  <div class="form-group" id="videosInput1" style="display: none;">
+
+                    <label>Upload Video</label>
+                    <input oninput="Filevalidation()" type="file" value="" class="form-control" id="video" name="video"
+                      placeholder="Choose A Video" accept="video/mp4,video/x-m4v,video/*" oninput="changeFunction()">
+                  </div>
+
+                  <div class="form-group maxupload" for="videosInput" style="display: none;">
+                    <p>Max upload size is 25MB</p>
+                  </div>
+                  <div class="form-group remarkreel">
+                    <textarea  type="text" class="form-control" id="remarkreel" name="remark" placeholder="Enter Remark"></textarea>
+                  </div>
+
+                  <div class="checkbox">
+                    <input name="terms" type="checkbox">
+                    <label>
+                      I accept the <a href="" id="formpopup" data-toggle="modal" data-target="#form">Terms and
+                        Conditions.*</a>
+                    </label>
+
+                  </div>
+
+                  <div id="book_form_massage" style="display: none; color:red; margin-top: 5px;"></div>
+
+                  <button type="submit" class="btn btn-warbing" id="saveform">SUBMIT</button>
+                </form>
+              </div>
+            </div>
+            <div id="tab2" class="tab-content">
+              <div class="about_info">
+                <h2 id="videoform">Upload Your Video</h2>
+                <form id="formdatareel" method="post" enctype="multipart/form-data">
+
+                  <input type="hidden" name="formName" value="reels">
+                  <input type="hidden" name="utm_source" id="utm_source"
+                  value="<% if(typeof utm_sourcekey!=='undefined'){ %><%=utm_sourcekey%><%}%>">
+                <input type="hidden" name="utm_medium" id="utm_medium"
+                  value="<% if(typeof utm_mediumkey!=='undefined'){ %><%=utm_mediumkey%><%}%>">
+                <input type="hidden" name="utm_campaign" id="utm_campaign"
+                  value="<% if(typeof utm_campaignkey!=='undefined'){ %><%=utm_campaignkey%><%}%>">
+                  <div class="form-group">
+                    <input onkeypress="return nameValidater(event)" type="text" class="form-control" name="name"
+                      id="namereel" placeholder="Enter Your Name*" required>
+						<span class="error" id="namereel_error" style="display: none; color:red; margin-top: 5px;">Name Is Required</span>
+
+                  </div>
+                  <div class="form-group">
+                    <input oninput="emailvalidationreel()" type="email" class="form-control" name="email"
+                      id="emailreel" placeholder="Enter A Valid Email ID">
+						<span class="error" id="emailreel_error" style="display: none; color:red; margin-top: 5px;">Name Is Required</span>
+
+                  </div>
+                  <div class="form-group">
+                    <input onkeypress="return onlyNumberKey(event)" type="text" class="form-control" id="mobilereel"
+                      name="phone" placeholder="Phone No.*" maxlength="10" required>
+						<span class="error" id="phonereel_error" style="display: none; color:red; margin-top: 5px;">Name Is Required</span>
+
+                  </div>
+                  <div class="form-group">
+                    <label id="genderreel">Gender*</label>
+                    <input type="radio" name="gender" id="radiobtn" value="male" checked> Male
+                    <input type="radio" name="gender" id="radiobtn" value="female"> Female
+						<span class="error" id="genderreel_error" style="display: none; color:red; margin-top: 5px;">Name Is Required</span>
+                 
+                  </div>
+
+
+
+                  <div class="form-group">
+                    <input onkeypress="return onlyNumberKey(event)" onchange="ageValidationreel()" type="text"
+                      class="form-control" id="agereel" name="age" placeholder="Enter Your Age*" maxlength="2" required>
+						<span class="error" id="agereel_error" style="display: none; color:red; margin-top: 5px;">Name Is Required</span>
+                 
+                    </div>
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="cityreel" name="city" placeholder="Enter Your City*"
+                      required>
+						<span class="error" id="cityreel_error" style="display: none; color:red; margin-top: 5px;">Name Is Required</span>
+
+                  </div>
+                  <div class="form-group pincode">
+                    <input onkeypress="return onlyNumberKey(event)" onchange="Pinvalidationreel()" type="text"
+                      class="form-control" id="pincodereel" name="pincode" placeholder="Enter Pincode*" maxlength="6"
+                      required>
+						<span class="error" id="pincodereel_error" style="display: none; color:red; margin-top: 5px;">Name Is Required</span>
+
+                  </div>
+                  <div class="form-group" id="imageSection">
+
+                    <label>Upload Video*</label>
+                    <input type="file" value="" class="form-control" id="videoreel" name="video"
+                      placeholder="Choose A Video" accept="video/mp4,video/x-m4v,video/*" oninput="Filevalidation()">
+						<span class="error" id="video_error" style="display: none; color:red; margin-top: 5px;">Name Is Required</span>
+
+                  </div>
+
+                  <div class=" maxupload" for="videosInput">
+                    <p>Max upload size is 25 MB and 40 Seconds</p>
+                  </div>
+
+                  <div class="form-group remark">
+                    <textarea  type="text" class="form-control" id="remark" name="remark" placeholder="Enter Remark"></textarea>
+                  </div>
+                  <div class="checkbox">
+                    <input name="terms" type="checkbox" id="checkbox">
+                    <label>
+                      I accept the <a href="" id="formpopupreel" data-toggle="modal" data-target="#form">Terms and
+                        Conditions.<span class="text-danger">*</span></a>
+                    </label>
+                  </div>
+                  <div id="book_form_massage_reel" style="display: none; color:red; margin-top: 5px;"></div>
+
+                  <button type="submit" class="btn btn-warbing" id="saveformReels">SUBMIT</button>
+                </form>
+              </div>
+            </div>
+          </div> <!-- END tabs-content -->
+        </div> <!-- END tabs -->
+
+      </div>
+    </div>
+
+
+    <div class="about_area1">
+
+    </div>
+  </div>
+
+  </div>
+  </div>
+  </div>
+
+  <footer class="footer">
+    <p class="m-0 text-center text-white"><span>Disclaimer</span> <br> Reliance Trends can use your photo for official
+      purpose. <br>
+      Terms & Conditions Apply.</p>
+    <p class="m-0 text-center text-white">Copyright &copy; Trends 2023</p>
+  </footer>
+
+
+
+  <div class="modal fade" id="form" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header border-bottom-0">
+          <h5 class="modal-title" id="exampleModalLabel">Terms and Condition Apply</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="form-group1">
+
+            <ul>
+              <li>This competition is open only for the citizens of India.</li>
+              <li> Only one entry per individual will be accepted.</li>
+              <li> Maximum duration of reels / video has to be 40 seconds.</li>
+              <li> Maximum video size should be 25 MB.</li>
+              <li> Maximum selfie size should be 10 MB.</li>
+              <li> Last date of participation is 30th November, 2023 till 5 pm.</li>
+              <li> The employees and family members of Reliance Retail Ltd and Prabhat Khabar are not eligible to
+                participate in this contest. </li>
+              <li>Selfie contest prizes in rupees <br> 1st Prize : 50,000 <br> 2nd Prize : 30,000 <br> 3rd Prize :
+                20,000</li>
+              <li>FESTIVE contest prizes in rupees <br> 1st Prize : 50,000 <br> 2nd Prize : 30,000 <br> 3rd Prize : 20,000
+              </li>
+              <li> Applicable tax will be deducted from the prize money</li>
+              <li> The decision of the judges will be final.</li>
+              <li>Any dispute will be subject to Ranchi jurisdiction.</li>
+
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div id="success_tic" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content1">
+        <a class="close" href="#" data-dismiss="modal">&times;</a>
+        <div class="page-body">
+          <div class="head">
+            <h2 style="margin-top:5px;">Thank you !</h2>
+            <h4>Congratulations you have successfully registered for the Trends Nav Utsav Contest. You have won 2
+              discount coupons from Trends.
+              You will be getting a message on your registered mobile number shortly. You can avail the discount coupons
+              at your nearest Trends store by showing the message on your mobile.</h4>
+          </div>
+
+          <h1 style="text-align:center; margin-top: 25px;">
+            <div class="checkmark-circle">
+              <div class="background"></div>
+              <div class="checkmark draw"></div>
+            </div>
+            <h1>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!-- Bootstrap core JS-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <!-- Core theme JS-->
+  <script src="../../static/js/scripts.js"></script>
+  <script type="text/javascript" src="../../static/js/jquery-3.6.0.min.js"></script>
+  <script type="text/javascript">
+    $(document).on("click", "#cust_btn", function () {
+      $("#mymodel").modal("toggle");
+    })
+  </script>
+  <script>
+    $('#tabs-nav li:first-child').addClass('active');
+    $('.tab-content').hide();
+    $('.tab-content:first').show();
+
+    $('#tabs-nav li').click(function () {
+      $('#tabs-nav li').removeClass('active');
+      $(this).addClass('active');
+      $('.tab-content').hide();
+
+      var activeTab = $(this).find('a').attr('href');
+      $(activeTab).fadeIn();
+      return false;
+    });
+  </script>
+  <script>
+    function nameValidater(evt) {
+
+      var inputValue = (evt.which) ? evt.which : evt.keyCode
+
+      if (!(inputValue >= 65 && inputValue <= 93) && (inputValue <= 95 && inputValue <= 120) && (inputValue != 32 && inputValue != 0))
+
+        return false;
+
+      return true;
+
+    }
+
+    function onlyNumberKey(evt) {
+
+      var ASCIICode = (evt.which) ? evt.which : evt.keyCode
+
+      if (ASCIICode > 31 && (ASCIICode < 48 || ASCIICode > 57))
+
+        return false;
+
+      return true;
+
+    }
+
+    function emailvalidation() {
+      var email = $('#email').val();
+      // alert("test")
+      var reg = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      if(email.length ==0){
+        document.getElementById("email_error").style.display ="none";
+
+      }else
+      if (!reg.test(email)) {
+        $("#email_error").empty();
+        $("#email_error").text("Please Enter Valid Email");
+        document.getElementById("email_error").style.display ="block";
+        // alert("Please enter valid email");
+        // $('#email').val("")
+	    // return  false
+
+      }else{
+        document.getElementById("email_error").style.display ="none";
+
+      }
+    }
+
+    function emailvalidationreel() {
+      var email = $('#emailreel').val();
+
+      var reg = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      if(email.length ==0){
+        document.getElementById("emailreel_error").style.display ="none";
+
+      }else
+      if (!reg.test(email)) {
+        $("#emailreel_error").empty();
+        $("#emailreel_error").text("Please Enter Valid Email");
+        document.getElementById("emailreel_error").style.display ="block";
+        error_count =error_count+1;
+        // alert("Please enter valid email");
+        $('#emailreel').val("")
+        return false
+      }else{
+        document.getElementById("emailreel_error").style.display ="none";
+
+      }
+    }
+
+    function ageValidation() {
+      var age = $('#age').val();
+      var reg = /^[0-9]+$/;
+      if (!reg.test(age)) {
+
+        $("#age_error").empty();
+        $("#age_error").text("Age should be numbers only");
+        document.getElementById("age_error").style.display ="block";
+        error_count =error_count+1;
+
+      } else if ((age.length) >= 3 || (age == 0)) {
+        $("#age_error").empty();
+        $("#age_error").text("Please enter a valid age");
+        document.getElementById("age_error").style.display ="block";
+        error_count =error_count+1;
+        
+      }else{
+        document.getElementById("age_error").style.display ="none";
+      }
+    }
+
+    function ageValidationreel() {
+      var age = $('#agereel').val();
+      if (age >= 120) {
+        $("#agereel_error").empty();
+        $("#agereel_error").text("Enter a Valid Age");
+        document.getElementById("agereel_error").style.display ="block";
+        error_count =error_count+1;
+      } else if ((age.length) >= 3 || (age == 0)) {
+        $("#agereel_error").empty();
+        $("#agereel_error").text("Enter a Valid Age");
+        document.getElementById("agereel_error").style.display ="block";
+        error_count =error_count+1;
+      }else{
+        document.getElementById("agereel_error").style.display ="none";
+
+      }
+    }
+
+    function phonevalidation() {
+
+      var mobile = $('#mobile').val();
+      var reg = /^[0-9]+$/;
+      if (mobile.trim() == '') {
+        $("#phone_error").empty();
+        $("#phone_error").text("Mobile number required!");
+        document.getElementById("phone_error").style.display ="block";
+	      error_count =error_count+1;
+      } else if (!reg.test(mobile)) {
+        $("#phone_error").empty();
+        $("#phone_error").text("Mobile number should be numbers only");
+        document.getElementById("phone_error").style.display ="block";
+	      error_count =error_count+1;
+      } else if ((mobile.length) < 10 || (mobile.length) > 10) {
+        $("#phone_error").empty();
+        $("#phone_error").text("Mobile should only be 10 digits");
+        document.getElementById("phone_error").style.display ="block";
+	      error_count =error_count+1;
+      }else{
+        document.getElementById("phone_error").style.display ="none";
+      }
+
+    }
+
+
+    function imagevalidation() {
+      const fi = document.getElementById('image');
+   
+      if (fi.files.length > 0) {
+
+        const fsize = fi.files.item(0).size;
+        const file = Math.round((fsize / 1024));
+        if (file >= 10240) {
+              $("#image_error").empty();
+            $("#image_error").text('File too Big, please select a file less than 10mb');
+            document.getElementById("image_error").style.display ="block";
+            error_count =error_count+1;
+          $('#5120').val("")
+
+        } else {
+          console.log("file", file);
+        }
+      }
+    }
+
+
+    function Filevalidation() {
+      const videoInput = document.getElementById("videoreel");
+
+      if (videoInput.files.length > 0) {
+
+        const fsize = videoInput.files.item(0).size;
+        const file = Math.round((fsize / 1024));
+        console.log("file data", videoInput.files.item(0));
+        if (file >= 25600) {
+          $("#video_error").empty();
+          $('#videoreel').val("")
+
+        $("#video_error").text("File too Big, please select a file less than 25 MB");
+
+        document.getElementById("video_error").style.display ="block";
+        error_count =error_count+1;
+        } else {
+        document.getElementById("video_error").style.display ="none";
+          console.log("file", file);
+        }
+      }
+
+      if (videoInput.files.length > 0) {
+        const videoFile = videoInput.files[0];
+        const videoElement = document.createElement("video");
+        videoElement.src = URL.createObjectURL(videoFile);
+        videoElement.addEventListener("loadedmetadata", function () {
+          const videoDuration = videoElement.duration;
+          const formattedDuration = formatVideoDuration(videoDuration);
+          var a = formattedDuration.split(':');
+          var seconds = (+a[0]) * 60 * 60 + (+a[1]) * 60 + (+a[2]);
+          if (seconds > 40) {
+            $("#video_error").empty();
+            $("#video_error").text("The video length should not be greater than 40 seconds");
+            document.getElementById("video_error").style.display ="block";
+            error_count =error_count+1;
+            $('#videoreel').val("")
+
+          } else {
+            document.getElementById("video_error").style.display ="none";
+          }
+        });
+
+      } else {
+      }
+    }
+
+    function formatVideoDuration(duration) {
+      const hours = Math.floor(duration / 3600);
+      const minutes = Math.floor((duration % 3600) / 60);
+      const seconds = Math.floor(duration % 60);
+      return `${hours}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+    }
+
+
+    $("#saveform").click(async function (e) {
+      e.preventDefault();
+   var error_count = 0;
+
+        if(!$('#name').val()){
+          $("#name_error").empty();
+          $("#name_error").text("Name Is Required");
+          document.getElementById("name_error").style.display ="block";
+          error_count =error_count+1;
+        }else{
+          document.getElementById("name_error").style.display ="none";
+        }
+
+       if (!$('#mobile').val()) {
+        $("#phone_error").empty();
+        $("#phone_error").text("Phone Number Is Required");
+        document.getElementById("phone_error").style.display ="block";
+	      error_count =error_count+1;
+      } else if ($('#mobile').val().length < 10) {
+        $("#phone_error").empty();
+        $("#phone_error").text("Invalid Mobile Number");
+        document.getElementById("phone_error").style.display ="block";
+        error_count =error_count+1;
+
+      } else if ($('#mobile').val() == '0000000000') {
+        $("#phone_error").empty();
+        $("#phone_error").text("Invalid Mobile Number");
+        document.getElementById("phone_error").style.display ="block";
+        error_count =error_count+1;
+      }else{
+
+	    document.getElementById("phone_error").style.display ="none";
+
+      }
+
+       if (!$('#age').val()) {
+        $("#age_error").empty();
+        $("#age_error").text("Age Is Required");
+        document.getElementById("age_error").style.display ="block";
+        error_count =error_count+1;
+      }else{
+	    document.getElementById("age_error").style.display ="none";
+
+      }
+      
+      
+      if (!$('#city').val()) {
+        $("#city_error").empty();
+        $("#city_error").text("City Is Required");
+        document.getElementById("city_error").style.display ="block";
+        error_count =error_count+1;
+      }else{
+	    document.getElementById("city_error").style.display ="none";
+
+      }
+      
+      
+      if (!$('#pincode').val()) {
+        $("#pincode_error").empty();
+        $("#pincode_error").text("Pincode Is Required");
+        document.getElementById("pincode_error").style.display ="block";
+        error_count =error_count+1;
+
+      }else if($('#pincode').val().length < 6){
+        $("#pincode_error").empty();
+        $("#pincode_error").text("Please Enter a Valid Pincode");
+        document.getElementById("pincode_error").style.display ="block";
+        error_count =error_count+1;
+      }else{
+	    document.getElementById("pincode_error").style.display ="none";
+
+      }
+
+
+       if (!$('#image').val()) {
+        $("#image_error").empty();
+        $("#image_error").text("Image Is Required");
+        document.getElementById("image_error").style.display ="block";
+        error_count =error_count+1;
+      }else{
+        document.getElementById("image_error").style.display ="none";
+
+      }
+
+       if (!$("input[type='checkbox'][name='terms']:checked").length) {
+        $("#book_form_massage").empty();
+        $("#book_form_massage").text("Please Check Terms and conditions");
+        document.getElementById("book_form_massage").style.display ="block";
+        error_count =error_count+1;
+      }
+      else {
+        document.getElementById("book_form_massage").style.display ="block";
+
+
+      }
+
+        if ($('#image').val()) {
+          var fileInputimage = document.getElementById('image');
+          var filePathimage = fileInputimage.value;
+          var allowedExtensionsimage = /(\.jpg|\.png|\.jpeg)$/i;
+          if (!allowedExtensionsimage.exec(filePathimage)) {
+            $("#image_error").empty();
+            $("#image_error").text('Invalid File Type For Image');
+            document.getElementById("image_error").style.display ="block";
+            error_count =error_count+1;
+
+            fileInputimage.value = '';
+
+            return false;
+          }
+        }
+
+        if(error_count == 0){
+        document.getElementById("book_form_massage").style.display ="none";
+
+          let formData = new FormData(document.querySelector('#formdata'));
+          $('.loader-main').removeClass('hidden');
+          const response = await asyncPost('/api/pk-master/add', '', formData);
+        }
+       
+
+      
+    });
+
+
+    $("#saveformReels").click(async function (e) {
+      e.preventDefault();
+   var error_count = 0;
+   var reg = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+      if (!$('#namereel').val()) {
+        $("#namereel_error").empty();
+          $("#namereel_error").text("Name Is Required");
+        document.getElementById("namereel_error").style.display ="block";
+        error_count =error_count+1;
+      }else{
+        document.getElementById("namereel_error").style.display ="none";
+      }
+
+      let mobile = $('#mobilereel').val()
+
+      console.log("mobile",mobile);
+      if (mobile.length == 0 ) {
+        $("#phonereel_error").empty();
+        $("#phonereel_error").text("Phone Number Is Required");
+        document.getElementById("phonereel_error").style.display ="block";
+	      error_count =error_count+1;
+      } else if (mobile.length < 10) {
+        $("#phonereel_error").empty();
+        $("#phonereel_error").text("Invalid Mobile Number");
+        document.getElementById("phonereel_error").style.display ="block";
+        error_count =error_count+1;
+      } else if (mobile == '0000000000') {
+        $("#phonereel_error").empty();
+        $("#phonereel_error").text("Invalid Mobile Number");
+        document.getElementById("phonereel_error").style.display ="block";
+        error_count =error_count+1;
+      }else{
+	    document.getElementById("phonereel_error").style.display ="none";
+      }
+      
+      
+      if (!$('#agereel').val()) {
+        $("#agereel_error").empty();
+        $("#agereel_error").text("Age is required");
+        document.getElementById("agereel_error").style.display ="block";
+        error_count =error_count+1;
+      }else{
+	    document.getElementById("agereel_error").style.display ="none";
+      } 
+      
+      
+      if ($('#cityreel').val().length <=0) {
+        $("#cityreel_error").empty();
+        $("#cityreel_error").text("City is required");
+        document.getElementById("cityreel_error").style.display ="block";
+        error_count =error_count+1;
+      }else{
+        document.getElementById("cityreel_error").style.display ="none";
+      } 
+      
+      if ($('#pincodereel').val().length <=0) {
+        $("#pincodereel_error").empty();
+        $("#pincodereel_error").text("Pincode Is Required");
+        document.getElementById("pincodereel_error").style.display ="block";
+        error_count =error_count+1;
+      }else if($('#pincodereel').val().length <6){
+        $("#pincodereel_error").empty();
+        $("#pincodereel_error").text("Please Enter A Valid Pincode");
+        document.getElementById("pincodereel_error").style.display ="block";
+        error_count =error_count+1;
+        
+      }else{
+        document.getElementById("pincodereel_error").style.display ="none";
+
+      }
+      
+       if (!$('#videoreel').val()) {
+        $("#video_error").empty();
+        $("#video_error").text("Video Is Required");
+        document.getElementById("video_error").style.display ="block";
+        error_count =error_count+1;
+      }else{
+        document.getElementById("video_error").style.display ="none";
+
+      }
+       if (!$("input[type='checkbox'][id='checkbox']:checked").length) {
+        $("#book_form_massage_reel").empty();
+        $("#book_form_massage_reel").text("Please Check Terms and conditions");
+        document.getElementById("book_form_massage_reel").style.display ="block";
+        error_count =error_count+1;
+      }else{
+        document.getElementById("book_form_massage_reel").style.display ="none";
+
+      }
+      if(error_count == 0){
+
+        let formData = new FormData(document.querySelector('#formdatareel'));
+        $('.loader-main').removeClass('hidden');
+        const response = await asyncPost('/api/pk-master/add', '', formData);
+
+      }
+    });
+
+    function asyncPost(url, param, data) {
+
+      return new Promise((res, rej) => {
+        $.ajax({
+          type: "POST",
+          url: url + param,
+          data: data,
+          async: true,
+          processData: false,
+          contentType: false,
+          success: function (data, status, xhr) {
+
+            $('.loader-main').addClass('hidden');
+            $('#success_tic').modal('toggle');
+            setTimeout(function () {
+              location.reload();
+            }, 5000)
+
+
+          },
+          error: function (res, textStatus, errorMessage) {
+            window.location.href = window.location.href;
+          }
+        });
+      });
+    };
+
+  </script>
+
+  <script>
+    function showimg() {
+
+      $('#imageSection').css('display', 'flex')
+      $('#videosInput').css('display', 'none')
+
+    }
+    function hideimg() {
+
+      console.log(this.text('id'), "this.text('id')");
+      if (this.text('id')) {
+
+      }
+      let html = ` <label>Upload Video</label>
+<input oninput="Filevalidation()" type="file" value="" class="form-control" id="video" name="video" placeholder="Choose A Video" accept="video/mp4,video/x-m4v,video/*" oninput="changeFunction()">`
+
+      $('#imageSection').html(html)
+
+      $('#videosInput').css('display', 'block')
+
+    }
+
+    $('.palceholder').click(function() {
+      $(this).siblings('input').focus();
+    });
+    $('.form-control').focus(function() {
+      $(this).siblings('.palceholder').hide();
+    });
+    $('.form-control').blur(function() {
+      var $this = $(this);
+      if ($this.val().length == 0)
+      $(this).siblings('.palceholder').show();
+    });
+    $('.form-control').blur();
+  </script>
+
+</body>
+
+</html>

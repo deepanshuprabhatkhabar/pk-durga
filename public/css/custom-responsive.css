@@ -1,0 +1,60 @@
+@media screen and (max-width: 1366px) {
+  .txt-top-new-space {
+    padding: 20% 10% 32% 10%;
+}
+.heading-main-center {
+  margin: 0px 0 0 0;
+}
+header .top-section {
+  margin-top: 5px;
+}
+fieldset {
+  padding-top: 10px;
+}
+.max-height-form {
+  min-height: 68vh;
+}
+.heading-main-text {
+  margin: 20px 0 20px 0;
+}
+.steps ul li {
+  width: 31%;
+}
+.txt-top-new{padding: 20% 10% 32% 10%;}
+}
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
+ 
+  .steps ul li {
+    width: 32%;
+    margin: 0;
+  }
+  li.disabled.last{font-size: 6rem;}
+  .steps .title span {
+    font-size: 1.3rem;
+    line-height: 27px; 
+}
+.txt-top-new{margin: 0 0 24px 0px;}
+.steps .title {
+  margin: -15px 0 0 0;
+  padding-right:10px;
+  padding-left:10px;
+}
+.max-height-form { min-height: 70vh;}
+.regist {width: auto;}
+.form_field_inner{min-width: 60%;}
+span.head-text-upload.pt-2.or {
+    padding: 10px;
+    font-size: 2rem;
+}
+.camera-btn a {
+    padding: 4px 15px 8px;
+}
+
+.txt-top-new{padding: 20% 5%!important; min-height: 60vh;}
+
+.txt-top-new {
+  padding: 20% 10% 32% 10%!important;
+}
+
+
+}

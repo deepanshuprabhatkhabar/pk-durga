@@ -1,0 +1,14 @@
+node_modules
+package-lock.json
+public/uploads
+test.js
+test.html
+.env
+resources/
+mail-listner-t.js
+notes.txt
+test2.js
+test3.js
+*.csv
+*.xlsx
+send_fax.js
