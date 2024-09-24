@@ -1,6 +1,5 @@
 'use strict';
 
-const { Validator } = require('node-input-validator');
 var bcrypt = require('bcrypt');
 
 var usersApi = require('../../api/users');

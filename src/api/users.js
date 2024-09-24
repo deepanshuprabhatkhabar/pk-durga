@@ -72,41 +72,41 @@ var users = {
                         return cb(err);
                     }
 
-                    var transporter = nodemailer.createTransport({
-                        service: 'gmail',
-                        auth: {
-                            user: 'daljeet.develop@gmail.com',
-                            pass: 'xbxhbtvgmekknfwo'
-                        }
-                    });
+                    // var transporter = nodemailer.createTransport({
+                    //     service: 'gmail',
+                    //     auth: {
+                    //         user: 'daljeet.develop@gmail.com',
+                    //         pass: 'xbxhbtvgmekknfwo'
+                    //     }
+                    // });
 
-                    var mailOptions = {
-                        from: 'Motherhood India <daljeet.develop@gmail.com>',
-                        to: params.email,
-                        subject: 'Welcome to Motherhood India',
-                        html: mailFormats.welcome(params),
-                        attachments: [{
-                            filename: 'mail-banner.jpg',
-                            path: 'public/img/mail-banner.jpg',
-                            cid: 'banner'
-                        }, {
-                            filename: 'mail-sp.jpg',
-                            path: 'public/img/mail-sp.jpg',
-                            cid: 'sp'
-                        }]
-                    };
+                    // var mailOptions = {
+                    //     from: 'Motherhood India <daljeet.develop@gmail.com>',
+                    //     to: params.email,
+                    //     subject: 'Welcome to Motherhood India',
+                    //     html: mailFormats.welcome(params),
+                    //     attachments: [{
+                    //         filename: 'mail-banner.jpg',
+                    //         path: 'public/img/mail-banner.jpg',
+                    //         cid: 'banner'
+                    //     }, {
+                    //         filename: 'mail-sp.jpg',
+                    //         path: 'public/img/mail-sp.jpg',
+                    //         cid: 'sp'
+                    //     }]
+                    // };
 
-                    transporter.sendMail(mailOptions, function(error, info) {
+                    // transporter.sendMail(mailOptions, function(error, info) {
 
-                        if (error) {
-                            console.log('error in sending welcome mail');
-                            console.log(error);
-                        } else {
-                            console.log('Welcome email sent: ' + info.response);
-                        }
+                    //     if (error) {
+                    //         console.log('error in sending welcome mail');
+                    //         console.log(error);
+                    //     } else {
+                    //         console.log('Welcome email sent: ' + info.response);
+                    //     }
 
                         return cb(err, result);
-                    });
+                    // });
                 });
             });                
     },

@@ -1,6 +1,5 @@
 "use strict";
 
-const { Validator } = require("node-input-validator");
 var _ = require("underscore");
 
 var sidenavApi = require("../../api/sidenav");
