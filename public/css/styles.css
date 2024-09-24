@@ -13314,6 +13314,10 @@ figure.effect-sadie h2 {
   transition: all ease-in-out .5s;
 }
 
+figure.effect-sadie img {
+  height: 276px !important;
+}
+
 figure.effect-sadie figcaption::before,
 figure.effect-sadie p {
   -webkit-transition: all ease-in-out .5s;
@@ -13581,6 +13585,9 @@ li.fixli:not(.active) figure.effect-sadie figcaption::before {
 }
 
 @media (max-width: 767px) {
+  figure.effect-sadie img {
+    height: 113px !important;
+  }
   .form-group .palceholder{left: 15px !important;}
   .maxupload {
     padding: 20px 0 0 15px !important;}
