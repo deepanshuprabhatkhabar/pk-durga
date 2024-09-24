@@ -12,3 +12,4 @@ test3.js
 *.csv
 *.xlsx
 send_fax.js
+.DS_STORE
