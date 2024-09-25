@@ -5,22 +5,26 @@ const config = require('../config/config.js');
 
 let dburl;
 
-if (config.mongodb.host && config.mongodb.host.length && config.mongodb.password && config.mongodb.password) {
-    dburl = "mongodb+srv://" + encodeURIComponent(config.mongodb.username) + ":" +
-        encodeURIComponent(config.mongodb.password) + "@" + config.mongodb.host +
-        "/" + config.mongodb.app_db +
-        "?retryWrites=true&w=majority";
+// Construct the database URL with the database name
+dburl = process.env.MONGODB_URL;
+console.log(dburl, "dburl");
 
-        console.log("if dburl", dburl);
-} else {
-    dburl = "mongodb://" + config.mongodb.host +
-        ":" + config.mongodb.port + "/" + config.mongodb.app_db +
-        "?serverSelectionTimeoutMS=5000&connectTimeoutMS=10000&authSource=" +
-        config.mongodb.auth_db;
+// if (config.mongodb.host && config.mongodb.host.length && config.mongodb.password && config.mongodb.password) {
+//     dburl = "mongodb+srv://" + encodeURIComponent(config.mongodb.username) + ":" +
+//         encodeURIComponent(config.mongodb.password) + "@" + config.mongodb.host +
+//         "/" + config.mongodb.app_db +
+//         "?retryWrites=true&w=majority";
 
-        console.log("else dburl", dburl);
+//         console.log("if dburl", dburl);
+// } else {
+//     dburl = "mongodb://" + config.mongodb.host +
+//         ":" + config.mongodb.port + "/" + config.mongodb.app_db +
+//         "?serverSelectionTimeoutMS=5000&connectTimeoutMS=10000&authSource=" +
+//         config.mongodb.auth_db;
 
-}
+//         console.log("else dburl", dburl);
+
+// }
 
 mongoose.connect(dburl, {
     useNewUrlParser: true,
