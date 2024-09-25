@@ -205,7 +205,7 @@ transporter.sendMail(mailOptions, function(error, info) {
 
           var config = {
             method: 'get',
-            url: `http://164.52.195.161/API/SendMsg.aspx?uname=20140999&pass=neutral@05052014&send=PKHABR&dest=${params.phone}&msg=Congratulations! You have successfully registered for the Trends Nav Utsav 2024 contest.`,
+            url: `http://164.52.195.161/API/SendMsg.aspx?uname=20140999&pass=neutral@05052014&send=PKHABR&dest=${params.phone}&msg=Congratulations! You have successfully registered for the Trends Nav Utsav Contest - NPHL (Prabhat Khabar)`,
             headers: { 
               'Cookie': 'ASP.NET_SessionId=lfzfewxmd4dfhienkermzu5b'
             }
@@ -231,7 +231,7 @@ transporter.sendMail(mailOptions, function(error, info) {
 
             var config = {
               method: 'get',
-              url: `http://164.52.195.161/API/SendMsg.aspx?uname=20140999&pass=neutral@05052014&send=PKHABR&dest=${params.phone}&msg=Congratulations! You have successfully registered for the Trends Nav Utsav 2024 contest.`,
+              url: `http://164.52.195.161/API/SendMsg.aspx?uname=20140999&pass=neutral@05052014&send=PKHABR&dest=${params.phone}&msg=Congratulations! You have successfully registered for the Trends Nav Utsav Contest - NPHL (Prabhat Khabar)`,
               headers: { 
                 'Cookie': 'ASP.NET_SessionId=lfzfewxmd4dfhienkermzu5b'
               }
