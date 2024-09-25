@@ -8,6 +8,7 @@ let dburl;
 // Construct the database URL with the database name
 dburl = process.env.MONGODB_URL;
 console.log(dburl, "dburl");
+const db_name = process.env.DB_NAME;
 
 // if (config.mongodb.host && config.mongodb.host.length && config.mongodb.password && config.mongodb.password) {
 //     dburl = "mongodb+srv://" + encodeURIComponent(config.mongodb.username) + ":" +
@@ -30,7 +31,8 @@ mongoose.connect(dburl, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useFindAndModify: false,
-    'useCreateIndex': true
+    'useCreateIndex': true,
+    dbName: db_name
 })
     .catch((err) => {
         console.log('MongoDb connection error: ' + err);
