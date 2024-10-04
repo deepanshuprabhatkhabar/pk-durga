@@ -930,15 +930,7 @@
             console.log("Error:", xhr.responseJSON);
             
             $('.loader-main').addClass('hidden');
-            
-            if (xhr.responseJSON && xhr.responseJSON.message) {
-              // Display the exact error message from the API
-              // $('#error-message').text(xhr.responseJSON.message);
-              // $('#error-modal').modal('show');
-            } else {
-              // $('#error-message').text("An error occurred. Please try again later.");
-              // $('#error-modal').modal('show');
-            }
+            alert("You have already submitted the form.");
           }
         });
       });
