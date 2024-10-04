@@ -34,16 +34,16 @@ var pkmaster = {
         }else{
   
 
-          let duplicateemail = await pkmasterModel.findOne({email: params.email}).lean()
+          // let duplicateemail = await pkmasterModel.findOne({email: params.email}).lean()
 
-          if(duplicateemail){
-            return cb(
-              ec.appError({
-                status: ec.DB_ERROR,
-                message: "DB EMAIL_EXISTS",
-              })
-            );
-          }
+          // if(duplicateemail){
+          //   return cb(
+          //     ec.appError({
+          //       status: ec.DB_ERROR,
+          //       message: "DB EMAIL_EXISTS",
+          //     })
+          //   );
+          // }
     
 
       //   //  console.log({"rrrrr": params})
@@ -61,10 +61,10 @@ var pkmaster = {
       // }
         }
     
-
+        console.log("params", params);
         pkmasterModel.create(params, function (err, result) {
           if (err) {
-            console.log(err);
+            console.log("error",err);
             return cb(
               ec.appError({
                 status: ec.DB_ERROR,
