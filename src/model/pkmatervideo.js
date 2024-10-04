@@ -39,27 +39,27 @@ var pkmaster = {
           );
         }
            
-        const duplicateEmail = await pkreelsModel.findOne({ email: params.email });
-        if (duplicateEmail) {
-          console.log("Duplicate email found:", params.email);
-          return cb(
-            ec.appError({
-              status: ec.EMAIL_EXISTS,
-              message: "you have already submitted the form",
-            })
-          );
-        }
+        // const duplicateEmail = await pkreelsModel.findOne({ email: params.email });
+        // if (duplicateEmail) {
+        //   console.log("Duplicate email found:", params.email);
+        //   return cb(
+        //     ec.appError({
+        //       status: ec.EMAIL_EXISTS,
+        //       message: "you have already submitted the form",
+        //     })
+        //   );
+        // }
 
-        const duplicatePhone = await pkreelsModel.findOne({ phone: params.phone });
-        if (duplicatePhone) {
-          console.log("Duplicate phone found:", params.phone);
-          return cb(
-            ec.appError({
-              status: ec.PHONE_EXISTS,
-              message: "you have already submitted the form",
-            })
-          );
-        }
+        // const duplicatePhone = await pkreelsModel.findOne({ phone: params.phone });
+        // if (duplicatePhone) {
+        //   console.log("Duplicate phone found:", params.phone);
+        //   return cb(
+        //     ec.appError({
+        //       status: ec.PHONE_EXISTS,
+        //       message: "you have already submitted the form",
+        //     })
+        //   );
+        // }
 
         console.log("params", params);
         pkreelsModel.create({

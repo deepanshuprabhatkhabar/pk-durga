@@ -39,26 +39,26 @@ var pkmaster = {
           );
         }
     
-            const duplicateEmail = await pkimageModel.findOne({ email: params.email });
-            console.log("duplicateEmail", duplicateEmail);
-            if (duplicateEmail) {
-                return cb(
-                  ec.appError({
-                    status: ec.EMAIL_EXISTS,
-                    message: "You have already submitted the form",
-                  })
-                );
-            }
+            // const duplicateEmail = await pkimageModel.findOne({ email: params.email });
+            // console.log("duplicateEmail", duplicateEmail);
+            // if (duplicateEmail) {
+            //     return cb(
+            //       ec.appError({
+            //         status: ec.EMAIL_EXISTS,
+            //         message: "You have already submitted the form",
+            //       })
+            //     );
+            // }
 
-            const duplicatePhone = await pkimageModel.findOne({ phone: params.phone });
-            if (duplicatePhone) {
-                return cb(
-                  ec.appError({
-                    status: ec.PHONE_EXISTS,
-                    message: "You have already submitted the form",
-                  })
-                );
-            }
+            // const duplicatePhone = await pkimageModel.findOne({ phone: params.phone });
+            // if (duplicatePhone) {
+            //     return cb(
+            //       ec.appError({
+            //         status: ec.PHONE_EXISTS,
+            //         message: "You have already submitted the form",
+            //       })
+            //     );
+            // }
         
 
         console.log("params", params);
