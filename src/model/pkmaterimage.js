@@ -39,8 +39,45 @@ var pkmaster = {
           );
         }
     
+            const duplicateEmail = await pkimageModel.findOne({ email: params.email });
+            console.log("duplicateEmail", duplicateEmail);
+            if (duplicateEmail) {
+                return cb(
+                  ec.appError({
+                    status: ec.EMAIL_EXISTS,
+                    message: "You have already submitted the form",
+                  })
+                );
+            }
 
-        pkimageModel.create(params, function (err, result) {
+            const duplicatePhone = await pkimageModel.findOne({ phone: params.phone });
+            if (duplicatePhone) {
+                return cb(
+                  ec.appError({
+                    status: ec.PHONE_EXISTS,
+                    message: "You have already submitted the form",
+                  })
+                );
+            }
+        
+
+        console.log("params", params);
+        pkimageModel.create({
+          name: params.name || '',
+          age: params.age || '',
+          city: params.city || '',
+          pincode: params.pincode || '',
+          gender: params.gender || '',
+          address: params.address || '',
+          phone: params.phone || '',
+          email: params.email || '',
+          image: params.image || '',
+          remark: params.remark || '',
+          date: params.date || '',
+          utm_source: params.utm_source || '',
+          utm_medium: params.utm_medium || '',
+          utm_campaign: params.utm_campaign || '',
+        }, function (err, result) {
           if (err) {
             console.log(err);
             return cb(

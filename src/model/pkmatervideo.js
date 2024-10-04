@@ -39,8 +39,45 @@ var pkmaster = {
           );
         }
            
+        const duplicateEmail = await pkreelsModel.findOne({ email: params.email });
+        if (duplicateEmail) {
+          console.log("Duplicate email found:", params.email);
+          return cb(
+            ec.appError({
+              status: ec.EMAIL_EXISTS,
+              message: "you have already submitted the form",
+            })
+          );
+        }
 
-        pkreelsModel.create(params, function (err, result) {
+        const duplicatePhone = await pkreelsModel.findOne({ phone: params.phone });
+        if (duplicatePhone) {
+          console.log("Duplicate phone found:", params.phone);
+          return cb(
+            ec.appError({
+              status: ec.PHONE_EXISTS,
+              message: "you have already submitted the form",
+            })
+          );
+        }
+
+        console.log("params", params);
+        pkreelsModel.create({
+          name: params.name || '',
+          age: params.age || '',
+          city: params.city || '',
+          pincode: params.pincode || '',
+          gender: params.gender || '',
+          address: params.address || '',
+          phone: params.phone || '',
+          email: params.email || '',
+          remark: params.remark || '',
+          video: params.video || '',
+          date: params.date || '',
+          utm_source: params.utm_source || '',
+          utm_medium: params.utm_medium || '',
+          utm_campaign: params.utm_campaign || '',
+        }, function (err, result) {
           if (err) {
             console.log(err);
             return cb(

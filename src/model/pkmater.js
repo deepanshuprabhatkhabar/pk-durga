@@ -60,8 +60,14 @@ var pkmaster = {
       // }
       // }
         }
+
+        const duplicateEmail = await pkmasterModel.findOne({ email: params.email });
+        if (duplicateEmail) {
+          console.log("duplicateEmail", duplicateEmail);
+          return cb(new Error('Email already exists'));
+        }
     
-        console.log("params", params);
+        console.log("params", JSON.stringify(params));
         pkmasterModel.create(params, function (err, result) {
           if (err) {
             console.log("error",err);

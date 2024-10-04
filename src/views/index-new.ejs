@@ -920,17 +920,25 @@
           processData: false,
           contentType: false,
           success: function (data, status, xhr) {
-
             $('.loader-main').addClass('hidden');
             $('#success_tic').modal('toggle');
             setTimeout(function () {
               location.reload();
             }, 5000)
-
-
           },
-          error: function (res, textStatus, errorMessage) {
-            window.location.href = window.location.href;
+          error: function (xhr, textStatus, errorThrown) {
+            console.log("Error:", xhr.responseJSON);
+            
+            $('.loader-main').addClass('hidden');
+            
+            if (xhr.responseJSON && xhr.responseJSON.message) {
+              // Display the exact error message from the API
+              // $('#error-message').text(xhr.responseJSON.message);
+              // $('#error-modal').modal('show');
+            } else {
+              // $('#error-message').text("An error occurred. Please try again later.");
+              // $('#error-modal').modal('show');
+            }
           }
         });
       });

@@ -104,7 +104,6 @@ var formdata = {
           utm_campaign: params.utm_campaign,
         
         };
-console.log("params", params);
         if (params.image) {
             var file = params.image;
             let file_extension = file.name.substr(file.name.lastIndexOf('.') + 1);
