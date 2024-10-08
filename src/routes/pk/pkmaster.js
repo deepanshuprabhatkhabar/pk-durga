@@ -132,6 +132,7 @@ var getintouch = {
                 t_data["Pincode"] = fetchdata[i].pincode;
                 t_data["Gender"] = fetchdata[i].gender;
                 t_data["Adderss"] = fetchdata[i].address;
+                t_data["Remark"] = fetchdata[i].remark;
                 t_data["Phone"] = fetchdata[i].phone;
                 t_data["Email"] = fetchdata[i].email;
 
@@ -206,6 +207,7 @@ var getintouch = {
                 t_data["Pincode"] = fetchdata[i].pincode;
                 t_data["Gender"] = fetchdata[i].gender;
                 t_data["Adderss"] = fetchdata[i].address;
+                t_data["Remark"] = fetchdata[i].remark;
                 t_data["Phone"] = fetchdata[i].phone;
                 t_data["Email"] = fetchdata[i].email;
 
@@ -283,6 +285,7 @@ var getintouch = {
                 t_data["Pincode"] = fetchdata[i].pincode;
                 t_data["Gender"] = fetchdata[i].gender;
                 // t_data["Adderss"] = fetchdata[i].address;
+                t_data["Remark"] = fetchdata[i].remark;
                 t_data["Phone"] = fetchdata[i].phone;
                 t_data["Email"] = fetchdata[i].email;
 
